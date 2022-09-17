@@ -7,7 +7,7 @@ from thor_requests.contract import Contract
 # Import wallets from mnemonic (this should be only one, but for know we need 2 for testing)
 def wallet_import_mnemonic():
     #--EDIT--
-    mnemonic_1 = "word1, word2,...word12"
+    mnemonic_1 = "minute,opera,day,minimum,critic,invest,stove,bacon,birth,trap,siren,often"
     _wallet = Wallet.fromMnemonic(mnemonic_1.split(', '))
     _wallet_address = _wallet.getAddress()
     return _wallet, _wallet_address
@@ -44,7 +44,7 @@ def transfer_token(_wallet, _receiver_address, amount):
         (_wallet, main_wallet_address) = wallet_import_mnemonic()
 
         #Get contract build and address --EDIT--
-        _contract_Token = Contract.fromFile("/build/contracts/MToken.json")
+        _contract_Token = Contract.fromFile("build/contracts/MToken.json")
         Token_contract_address="0xa98Ce4051A0d1cb1c0025b13DaB371239fD0C257"
 
         #transfers tokens to the _wallet_address
@@ -56,3 +56,9 @@ def transfer_token(_wallet, _receiver_address, amount):
             to=Token_contract_address,
         )
         
+def main(wallet_id,reward):
+    reward = float(reward)
+    reward = int(reward*(10**18))
+    (connector, _contract_Token,  Token_contract_address)=transfer_token()
+    print("------------------Transfer MTokens------------------\n")
+    transfer_token(connector, Token_contract_address, _wallet, wallet_id, reward)
