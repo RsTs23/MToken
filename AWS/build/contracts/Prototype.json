@@ -1,0 +1,4024 @@
+{
+  "contractName": "Prototype",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        }
+      ],
+      "name": "master",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "newMaster",
+          "type": "address"
+        }
+      ],
+      "name": "setMaster",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "blockNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "balance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "blockNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "energy",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        }
+      ],
+      "name": "hasCode",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "storageFor",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        }
+      ],
+      "name": "creditPlan",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "credit",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "recoveryRate",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "credit",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "recoveryRate",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCreditPlan",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "isUser",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "userCredit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "addUser",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "removeUser",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        }
+      ],
+      "name": "sponsor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        }
+      ],
+      "name": "unsponsor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "sponsorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "isSponsor",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "sponsorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "selectSponsor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "self",
+          "type": "address"
+        }
+      ],
+      "name": "currentSponsor",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"addUser\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"blockNumber\",\"type\":\"uint256\"}],\"name\":\"balance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"}],\"name\":\"creditPlan\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"credit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"recoveryRate\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"}],\"name\":\"currentSponsor\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"blockNumber\",\"type\":\"uint256\"}],\"name\":\"energy\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"}],\"name\":\"hasCode\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"sponsorAddress\",\"type\":\"address\"}],\"name\":\"isSponsor\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"isUser\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"}],\"name\":\"master\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"removeUser\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"sponsorAddress\",\"type\":\"address\"}],\"name\":\"selectSponsor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"credit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"recoveryRate\",\"type\":\"uint256\"}],\"name\":\"setCreditPlan\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"newMaster\",\"type\":\"address\"}],\"name\":\"setMaster\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"}],\"name\":\"sponsor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"key\",\"type\":\"bytes32\"}],\"name\":\"storageFor\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"}],\"name\":\"unsponsor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"self\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"userCredit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"balance(address,uint256)\":{\"params\":{\"blockNumber\":\"balance will be calculated at blockNumber\",\"self\":\"account address which may be contract account or external account address.\"},\"returns\":{\"_0\":\"self the amount of VET at blockNumber\"}},\"creditPlan(address)\":{\"params\":{\"self\":\"contract address\"},\"returns\":{\"credit\":\"the creditPlan of contract 'self'\"}},\"energy(address,uint256)\":{\"params\":{\"blockNumber\":\"energy will be calculated at blockNumber\",\"self\":\"account address which may be contract account or external account address.\"},\"returns\":{\"_0\":\"the amount of energy at blockNumber\"}},\"hasCode(address)\":{\"params\":{\"self\":\"check if address self is a contract account\"}},\"master(address)\":{\"params\":{\"self\":\"contract address\"},\"returns\":{\"_0\":\"self master address of self\"}},\"setCreditPlan(address,uint256,uint256)\":{\"params\":{\"credit\":\"original credit\",\"recoveryRate\":\"recovery rate of credit\",\"self\":\"contract address\"}},\"setMaster(address,address)\":{\"params\":{\"newMaster\":\"new master account which will be set.\",\"self\":\"contract address\"}},\"storageFor(address,bytes32)\":{\"params\":{\"self\":\"contract address\"},\"returns\":{\"_0\":\"value indexed by key at self storage\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addUser(address,address)\":{\"notice\":\"add address 'user' to the user list of a contract 'self'.\"},\"currentSponsor(address)\":{\"notice\":\"return current selected sponsor of contract 'self'\"},\"isSponsor(address,address)\":{\"notice\":\"check if 'sponsorAddress' is the sponser of contract 'self'.\"},\"isUser(address,address)\":{\"notice\":\"check if address 'user' is the user of contract 'self'.\"},\"removeUser(address,address)\":{\"notice\":\"remove 'user' from the user list of a contract 'self'.\"},\"selectSponsor(address,address)\":{\"notice\":\"select 'sponsorAddress' to be current selected sponsor of contract 'self'\"},\"setMaster(address,address)\":{\"notice\":\"'newMaster' will be set to contract 'self' and this function only works when msg sender is the old master.\"},\"sponsor(address)\":{\"notice\":\"msg sender volunteers to be a sponsor of the contract 'self'.\"},\"unsponsor(address)\":{\"notice\":\"msg sender removes itself from the sponsor candidates list of contract 'self'.\"},\"userCredit(address,address)\":{\"notice\":\"return the current credit of 'user' of the contract 'self'.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/prototype.sol\":\"Prototype\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/prototype.sol\":{\"keccak256\":\"0x519ffc8f0a3305cb595dcd80a4dd129a88411246e01315201943ab053b3f2f03\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7991e291378cbfc04ec3023811fc345a512dff0ed111ca64d0552ab1ae07fb7c\",\"dweb:/ipfs/QmZ4B9pvfXUdGLEsnALRqKmkcQZkvV7eCXdUNHutajgKoV\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.7.6;\r\n\r\n// Prototype is an account management model of VeChainThor.\r\n// In the account management model every contract has a master account, which, by default, is the creator of a contract.\r\n// The master account plays the role of a contract manager, which has some authorities including\r\n// \"setMaster\", \"setCreditPlan\", \"addUser\", \"removeUser\" and \"selectSponsor\".\r\n// Every contract keeps a list of users who can call the contract for free but limited by credit.\r\n// The user of a specific contract can be either added or removed by the contract master.\r\n// Although from a user's perspective the fee is free, it is paid by a sponsor of the contract.\r\n// Any one can be a sponser of a contract, just by calling sponsor function, and also the sponsor identity can be cancelled by calling unsponsor funtion.\r\n// A contract may have more than one sponsors, but only the current sponsor chosen by master need to pay the fee for the contract.\r\n// If the current sponsor is out of energy, master can select sponser from other sponsers candidates by calling selectSponsor function.\r\n// The creditPlan can be set by the master which includes credit and recoveryRate. Every user have the same original credit.\r\n// Every Transaction consumes some amount of credit which is equal to the fee of the Transaction, and the user can also pay the fee by itself if the gas payer is out of the credit.\r\n// The credit can be recovered based on recoveryRate (per block).\r\n\r\ninterface Prototype {\r\n    /// @param self contract address\r\n    /// @return self master address of self\r\n    function master(address self) external view returns (address);\r\n\r\n    /// @notice 'newMaster' will be set to contract 'self' and this function only works when msg sender is the old master.\r\n    /// @param self contract address\r\n    /// @param newMaster new master account which will be set.\r\n    function setMaster(address self, address newMaster) external;\r\n\r\n    /// @param self account address which may be contract account or external account address.\r\n    /// @param blockNumber balance will be calculated at blockNumber\r\n    /// @return self the amount of VET at blockNumber\r\n    function balance(address self, uint256 blockNumber)\r\n        external\r\n        view\r\n        returns (uint256);\r\n\r\n    /// @param self account address which may be contract account or external account address.\r\n    /// @param blockNumber energy will be calculated at blockNumber\r\n    /// @return the amount of energy at blockNumber\r\n    function energy(address self, uint256 blockNumber)\r\n        external\r\n        view\r\n        returns (uint256);\r\n\r\n    /// @param self check if address self is a contract account\r\n    function hasCode(address self) external view returns (bool);\r\n\r\n    /// @param self contract address\r\n    /// @return value indexed by key at self storage\r\n    function storageFor(address self, bytes32 key)\r\n        external\r\n        view\r\n        returns (bytes32);\r\n\r\n    /// @param self contract address\r\n    /// @return credit the creditPlan of contract 'self'\r\n    function creditPlan(address self)\r\n        external\r\n        view\r\n        returns (uint256 credit, uint256 recoveryRate);\r\n\r\n    /// @param self contract address\r\n    /// @param credit original credit\r\n    /// @param recoveryRate recovery rate of credit\r\n    function setCreditPlan(\r\n        address self,\r\n        uint256 credit,\r\n        uint256 recoveryRate\r\n    ) external;\r\n\r\n    /// @notice check if address 'user' is the user of contract 'self'.\r\n    function isUser(address self, address user) external view returns (bool);\r\n\r\n    /// @notice return the current credit of 'user' of the contract 'self'.\r\n    function userCredit(address self, address user)\r\n        external\r\n        view\r\n        returns (uint256);\r\n\r\n    /// @notice add address 'user' to the user list of a contract 'self'.\r\n    function addUser(address self, address user) external;\r\n\r\n    /// @notice remove 'user' from the user list of a contract 'self'.\r\n    function removeUser(address self, address user) external;\r\n\r\n    /// @notice msg sender volunteers to be a sponsor of the contract 'self'.\r\n    function sponsor(address self) external;\r\n\r\n    /// @notice msg sender removes itself from the sponsor candidates list of contract 'self'.\r\n    function unsponsor(address self) external;\r\n\r\n    /// @notice check if 'sponsorAddress' is the sponser of contract 'self'.\r\n    function isSponsor(address self, address sponsorAddress)\r\n        external\r\n        view\r\n        returns (bool);\r\n\r\n    /// @notice select 'sponsorAddress' to be current selected sponsor of contract 'self'\r\n    function selectSponsor(address self, address sponsorAddress) external;\r\n\r\n    /// @notice return current selected sponsor of contract 'self'\r\n    function currentSponsor(address self) external view returns (address);\r\n}\r\n",
+  "sourcePath": "C:\\Users\\paula_dp5y8vd\\token\\contracts\\prototype.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/prototype.sol",
+    "exportedSymbols": {
+      "Prototype": [
+        1746
+      ]
+    },
+    "id": 1747,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1597,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:13"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1746,
+        "linearizedBaseContracts": [
+          1746
+        ],
+        "name": "Prototype",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 1598,
+              "nodeType": "StructuredDocumentation",
+              "src": "1534:77:13",
+              "text": "@param self contract address\n @return self master address of self"
+            },
+            "functionSelector": "9ed153c0",
+            "id": 1605,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "master",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1601,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1600,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1605,
+                  "src": "1633:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1599,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1633:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1632:14:13"
+            },
+            "returnParameters": {
+              "id": 1604,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1603,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1605,
+                  "src": "1670:7:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1602,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1670:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1669:9:13"
+            },
+            "scope": 1746,
+            "src": "1617:62:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1606,
+              "nodeType": "StructuredDocumentation",
+              "src": "1687:220:13",
+              "text": "@notice 'newMaster' will be set to contract 'self' and this function only works when msg sender is the old master.\n @param self contract address\n @param newMaster new master account which will be set."
+            },
+            "functionSelector": "01378b58",
+            "id": 1613,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMaster",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1611,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1608,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1613,
+                  "src": "1932:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1607,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1932:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1610,
+                  "mutability": "mutable",
+                  "name": "newMaster",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1613,
+                  "src": "1946:17:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1609,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1946:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1931:33:13"
+            },
+            "returnParameters": {
+              "id": 1612,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1973:0:13"
+            },
+            "scope": 1746,
+            "src": "1913:61:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1614,
+              "nodeType": "StructuredDocumentation",
+              "src": "1982:215:13",
+              "text": "@param self account address which may be contract account or external account address.\n @param blockNumber balance will be calculated at blockNumber\n @return self the amount of VET at blockNumber"
+            },
+            "functionSelector": "6d8c859a",
+            "id": 1623,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1619,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1616,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1623,
+                  "src": "2220:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1615,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2220:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1618,
+                  "mutability": "mutable",
+                  "name": "blockNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1623,
+                  "src": "2234:19:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1617,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2234:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2219:35:13"
+            },
+            "returnParameters": {
+              "id": 1622,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1621,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1623,
+                  "src": "2305:7:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1620,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2305:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2304:9:13"
+            },
+            "scope": 1746,
+            "src": "2203:111:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1624,
+              "nodeType": "StructuredDocumentation",
+              "src": "2322:212:13",
+              "text": "@param self account address which may be contract account or external account address.\n @param blockNumber energy will be calculated at blockNumber\n @return the amount of energy at blockNumber"
+            },
+            "functionSelector": "1e95be45",
+            "id": 1633,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "energy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1629,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1626,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1633,
+                  "src": "2556:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1625,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2556:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1628,
+                  "mutability": "mutable",
+                  "name": "blockNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1633,
+                  "src": "2570:19:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1627,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2570:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2555:35:13"
+            },
+            "returnParameters": {
+              "id": 1632,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1631,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1633,
+                  "src": "2641:7:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1630,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2641:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2640:9:13"
+            },
+            "scope": 1746,
+            "src": "2540:110:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1634,
+              "nodeType": "StructuredDocumentation",
+              "src": "2658:59:13",
+              "text": "@param self check if address self is a contract account"
+            },
+            "functionSelector": "9538c4b3",
+            "id": 1641,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "hasCode",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1637,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1636,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1641,
+                  "src": "2740:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1635,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2740:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2739:14:13"
+            },
+            "returnParameters": {
+              "id": 1640,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1639,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1641,
+                  "src": "2777:4:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1638,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2777:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2776:6:13"
+            },
+            "scope": 1746,
+            "src": "2723:60:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1642,
+              "nodeType": "StructuredDocumentation",
+              "src": "2791:86:13",
+              "text": "@param self contract address\n @return value indexed by key at self storage"
+            },
+            "functionSelector": "04e7a457",
+            "id": 1651,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "storageFor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1647,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1644,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1651,
+                  "src": "2903:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1643,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2903:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1646,
+                  "mutability": "mutable",
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1651,
+                  "src": "2917:11:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1645,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2917:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2902:27:13"
+            },
+            "returnParameters": {
+              "id": 1650,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1649,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1651,
+                  "src": "2980:7:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1648,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2980:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2979:9:13"
+            },
+            "scope": 1746,
+            "src": "2883:106:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1652,
+              "nodeType": "StructuredDocumentation",
+              "src": "2997:90:13",
+              "text": "@param self contract address\n @return credit the creditPlan of contract 'self'"
+            },
+            "functionSelector": "80df45b4",
+            "id": 1661,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "creditPlan",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1655,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1654,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1661,
+                  "src": "3113:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1653,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3113:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3112:14:13"
+            },
+            "returnParameters": {
+              "id": 1660,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1657,
+                  "mutability": "mutable",
+                  "name": "credit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1661,
+                  "src": "3177:14:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1656,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3177:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1659,
+                  "mutability": "mutable",
+                  "name": "recoveryRate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1661,
+                  "src": "3193:20:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1658,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3193:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3176:38:13"
+            },
+            "scope": 1746,
+            "src": "3093:122:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1662,
+              "nodeType": "StructuredDocumentation",
+              "src": "3223:124:13",
+              "text": "@param self contract address\n @param credit original credit\n @param recoveryRate recovery rate of credit"
+            },
+            "functionSelector": "3659f8ed",
+            "id": 1671,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCreditPlan",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1669,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1664,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1671,
+                  "src": "3386:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1663,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3386:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1666,
+                  "mutability": "mutable",
+                  "name": "credit",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1671,
+                  "src": "3409:14:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1665,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3409:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1668,
+                  "mutability": "mutable",
+                  "name": "recoveryRate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1671,
+                  "src": "3434:20:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1667,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3434:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3375:86:13"
+            },
+            "returnParameters": {
+              "id": 1670,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3470:0:13"
+            },
+            "scope": 1746,
+            "src": "3353:118:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1672,
+              "nodeType": "StructuredDocumentation",
+              "src": "3479:67:13",
+              "text": "@notice check if address 'user' is the user of contract 'self'."
+            },
+            "functionSelector": "02d43dc8",
+            "id": 1681,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isUser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1677,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1674,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1681,
+                  "src": "3568:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1673,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3568:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1676,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1681,
+                  "src": "3582:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1675,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3582:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3567:28:13"
+            },
+            "returnParameters": {
+              "id": 1680,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1679,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1681,
+                  "src": "3619:4:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1678,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3619:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3618:6:13"
+            },
+            "scope": 1746,
+            "src": "3552:73:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1682,
+              "nodeType": "StructuredDocumentation",
+              "src": "3633:71:13",
+              "text": "@notice return the current credit of 'user' of the contract 'self'."
+            },
+            "functionSelector": "c9c4fc41",
+            "id": 1691,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "userCredit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1687,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1684,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1691,
+                  "src": "3730:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1683,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3730:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1686,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1691,
+                  "src": "3744:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1685,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3744:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3729:28:13"
+            },
+            "returnParameters": {
+              "id": 1690,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1689,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1691,
+                  "src": "3808:7:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1688,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3808:7:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3807:9:13"
+            },
+            "scope": 1746,
+            "src": "3710:107:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1692,
+              "nodeType": "StructuredDocumentation",
+              "src": "3825:69:13",
+              "text": "@notice add address 'user' to the user list of a contract 'self'."
+            },
+            "functionSelector": "8ca3b448",
+            "id": 1699,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addUser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1697,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1694,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1699,
+                  "src": "3917:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1693,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3917:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1696,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1699,
+                  "src": "3931:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1695,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3931:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3916:28:13"
+            },
+            "returnParameters": {
+              "id": 1698,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3953:0:13"
+            },
+            "scope": 1746,
+            "src": "3900:54:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1700,
+              "nodeType": "StructuredDocumentation",
+              "src": "3962:66:13",
+              "text": "@notice remove 'user' from the user list of a contract 'self'."
+            },
+            "functionSelector": "22928d6b",
+            "id": 1707,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeUser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1705,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1702,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1707,
+                  "src": "4054:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1701,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4054:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1704,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1707,
+                  "src": "4068:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1703,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4068:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4053:28:13"
+            },
+            "returnParameters": {
+              "id": 1706,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4090:0:13"
+            },
+            "scope": 1746,
+            "src": "4034:57:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1708,
+              "nodeType": "StructuredDocumentation",
+              "src": "4099:73:13",
+              "text": "@notice msg sender volunteers to be a sponsor of the contract 'self'."
+            },
+            "functionSelector": "766c4f37",
+            "id": 1713,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sponsor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1711,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1710,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1713,
+                  "src": "4195:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1709,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4195:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4194:14:13"
+            },
+            "returnParameters": {
+              "id": 1712,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4217:0:13"
+            },
+            "scope": 1746,
+            "src": "4178:40:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1714,
+              "nodeType": "StructuredDocumentation",
+              "src": "4226:90:13",
+              "text": "@notice msg sender removes itself from the sponsor candidates list of contract 'self'."
+            },
+            "functionSelector": "cdd2a99f",
+            "id": 1719,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unsponsor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1717,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1716,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1719,
+                  "src": "4341:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1715,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4341:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4340:14:13"
+            },
+            "returnParameters": {
+              "id": 1718,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4363:0:13"
+            },
+            "scope": 1746,
+            "src": "4322:42:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1720,
+              "nodeType": "StructuredDocumentation",
+              "src": "4372:72:13",
+              "text": "@notice check if 'sponsorAddress' is the sponser of contract 'self'."
+            },
+            "functionSelector": "d87333ac",
+            "id": 1729,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isSponsor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1725,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1722,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1729,
+                  "src": "4469:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1721,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4469:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1724,
+                  "mutability": "mutable",
+                  "name": "sponsorAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1729,
+                  "src": "4483:22:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1723,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4483:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4468:38:13"
+            },
+            "returnParameters": {
+              "id": 1728,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1727,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1729,
+                  "src": "4557:4:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1726,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4557:4:13",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4556:6:13"
+            },
+            "scope": 1746,
+            "src": "4450:113:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1730,
+              "nodeType": "StructuredDocumentation",
+              "src": "4571:85:13",
+              "text": "@notice select 'sponsorAddress' to be current selected sponsor of contract 'self'"
+            },
+            "functionSelector": "3871a9fb",
+            "id": 1737,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "selectSponsor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1735,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1732,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1737,
+                  "src": "4685:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1731,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4685:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1734,
+                  "mutability": "mutable",
+                  "name": "sponsorAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1737,
+                  "src": "4699:22:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1733,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4699:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4684:38:13"
+            },
+            "returnParameters": {
+              "id": 1736,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4731:0:13"
+            },
+            "scope": 1746,
+            "src": "4662:70:13",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1738,
+              "nodeType": "StructuredDocumentation",
+              "src": "4740:62:13",
+              "text": "@notice return current selected sponsor of contract 'self'"
+            },
+            "functionSelector": "23d8c7db",
+            "id": 1745,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currentSponsor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1741,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1740,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1745,
+                  "src": "4832:12:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1739,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4832:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4831:14:13"
+            },
+            "returnParameters": {
+              "id": 1744,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1743,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1745,
+                  "src": "4869:7:13",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1742,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4869:7:13",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4868:9:13"
+            },
+            "scope": 1746,
+            "src": "4808:70:13",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1747,
+        "src": "1507:3374:13"
+      }
+    ],
+    "src": "33:4850:13"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/prototype.sol",
+      "exportedSymbols": {
+        "Prototype": [
+          1746
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 1597,
+        "name": "PragmaDirective",
+        "src": "33:22:13"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1746
+          ],
+          "name": "Prototype",
+          "scope": 1747
+        },
+        "children": [
+          {
+            "attributes": {
+              "functionSelector": "9ed153c0",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "master",
+              "scope": 1746,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@param self contract address\n @return self master address of self"
+                },
+                "id": 1598,
+                "name": "StructuredDocumentation",
+                "src": "1534:77:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1605,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1599,
+                        "name": "ElementaryTypeName",
+                        "src": "1633:7:13"
+                      }
+                    ],
+                    "id": 1600,
+                    "name": "VariableDeclaration",
+                    "src": "1633:12:13"
+                  }
+                ],
+                "id": 1601,
+                "name": "ParameterList",
+                "src": "1632:14:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1605,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1602,
+                        "name": "ElementaryTypeName",
+                        "src": "1670:7:13"
+                      }
+                    ],
+                    "id": 1603,
+                    "name": "VariableDeclaration",
+                    "src": "1670:7:13"
+                  }
+                ],
+                "id": 1604,
+                "name": "ParameterList",
+                "src": "1669:9:13"
+              }
+            ],
+            "id": 1605,
+            "name": "FunctionDefinition",
+            "src": "1617:62:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "01378b58",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setMaster",
+              "scope": 1746,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice 'newMaster' will be set to contract 'self' and this function only works when msg sender is the old master.\n @param self contract address\n @param newMaster new master account which will be set."
+                },
+                "id": 1606,
+                "name": "StructuredDocumentation",
+                "src": "1687:220:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1613,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1607,
+                        "name": "ElementaryTypeName",
+                        "src": "1932:7:13"
+                      }
+                    ],
+                    "id": 1608,
+                    "name": "VariableDeclaration",
+                    "src": "1932:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "newMaster",
+                      "scope": 1613,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1609,
+                        "name": "ElementaryTypeName",
+                        "src": "1946:7:13"
+                      }
+                    ],
+                    "id": 1610,
+                    "name": "VariableDeclaration",
+                    "src": "1946:17:13"
+                  }
+                ],
+                "id": 1611,
+                "name": "ParameterList",
+                "src": "1931:33:13"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1612,
+                "name": "ParameterList",
+                "src": "1973:0:13"
+              }
+            ],
+            "id": 1613,
+            "name": "FunctionDefinition",
+            "src": "1913:61:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "6d8c859a",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "balance",
+              "scope": 1746,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@param self account address which may be contract account or external account address.\n @param blockNumber balance will be calculated at blockNumber\n @return self the amount of VET at blockNumber"
+                },
+                "id": 1614,
+                "name": "StructuredDocumentation",
+                "src": "1982:215:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1623,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1615,
+                        "name": "ElementaryTypeName",
+                        "src": "2220:7:13"
+                      }
+                    ],
+                    "id": 1616,
+                    "name": "VariableDeclaration",
+                    "src": "2220:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "blockNumber",
+                      "scope": 1623,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1617,
+                        "name": "ElementaryTypeName",
+                        "src": "2234:7:13"
+                      }
+                    ],
+                    "id": 1618,
+                    "name": "VariableDeclaration",
+                    "src": "2234:19:13"
+                  }
+                ],
+                "id": 1619,
+                "name": "ParameterList",
+                "src": "2219:35:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1623,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1620,
+                        "name": "ElementaryTypeName",
+                        "src": "2305:7:13"
+                      }
+                    ],
+                    "id": 1621,
+                    "name": "VariableDeclaration",
+                    "src": "2305:7:13"
+                  }
+                ],
+                "id": 1622,
+                "name": "ParameterList",
+                "src": "2304:9:13"
+              }
+            ],
+            "id": 1623,
+            "name": "FunctionDefinition",
+            "src": "2203:111:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "1e95be45",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "energy",
+              "scope": 1746,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@param self account address which may be contract account or external account address.\n @param blockNumber energy will be calculated at blockNumber\n @return the amount of energy at blockNumber"
+                },
+                "id": 1624,
+                "name": "StructuredDocumentation",
+                "src": "2322:212:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1633,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1625,
+                        "name": "ElementaryTypeName",
+                        "src": "2556:7:13"
+                      }
+                    ],
+                    "id": 1626,
+                    "name": "VariableDeclaration",
+                    "src": "2556:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "blockNumber",
+                      "scope": 1633,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1627,
+                        "name": "ElementaryTypeName",
+                        "src": "2570:7:13"
+                      }
+                    ],
+                    "id": 1628,
+                    "name": "VariableDeclaration",
+                    "src": "2570:19:13"
+                  }
+                ],
+                "id": 1629,
+                "name": "ParameterList",
+                "src": "2555:35:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1633,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1630,
+                        "name": "ElementaryTypeName",
+                        "src": "2641:7:13"
+                      }
+                    ],
+                    "id": 1631,
+                    "name": "VariableDeclaration",
+                    "src": "2641:7:13"
+                  }
+                ],
+                "id": 1632,
+                "name": "ParameterList",
+                "src": "2640:9:13"
+              }
+            ],
+            "id": 1633,
+            "name": "FunctionDefinition",
+            "src": "2540:110:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "9538c4b3",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "hasCode",
+              "scope": 1746,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@param self check if address self is a contract account"
+                },
+                "id": 1634,
+                "name": "StructuredDocumentation",
+                "src": "2658:59:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1641,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1635,
+                        "name": "ElementaryTypeName",
+                        "src": "2740:7:13"
+                      }
+                    ],
+                    "id": 1636,
+                    "name": "VariableDeclaration",
+                    "src": "2740:12:13"
+                  }
+                ],
+                "id": 1637,
+                "name": "ParameterList",
+                "src": "2739:14:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1641,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 1638,
+                        "name": "ElementaryTypeName",
+                        "src": "2777:4:13"
+                      }
+                    ],
+                    "id": 1639,
+                    "name": "VariableDeclaration",
+                    "src": "2777:4:13"
+                  }
+                ],
+                "id": 1640,
+                "name": "ParameterList",
+                "src": "2776:6:13"
+              }
+            ],
+            "id": 1641,
+            "name": "FunctionDefinition",
+            "src": "2723:60:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "04e7a457",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "storageFor",
+              "scope": 1746,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@param self contract address\n @return value indexed by key at self storage"
+                },
+                "id": 1642,
+                "name": "StructuredDocumentation",
+                "src": "2791:86:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1651,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1643,
+                        "name": "ElementaryTypeName",
+                        "src": "2903:7:13"
+                      }
+                    ],
+                    "id": 1644,
+                    "name": "VariableDeclaration",
+                    "src": "2903:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "key",
+                      "scope": 1651,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 1645,
+                        "name": "ElementaryTypeName",
+                        "src": "2917:7:13"
+                      }
+                    ],
+                    "id": 1646,
+                    "name": "VariableDeclaration",
+                    "src": "2917:11:13"
+                  }
+                ],
+                "id": 1647,
+                "name": "ParameterList",
+                "src": "2902:27:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1651,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 1648,
+                        "name": "ElementaryTypeName",
+                        "src": "2980:7:13"
+                      }
+                    ],
+                    "id": 1649,
+                    "name": "VariableDeclaration",
+                    "src": "2980:7:13"
+                  }
+                ],
+                "id": 1650,
+                "name": "ParameterList",
+                "src": "2979:9:13"
+              }
+            ],
+            "id": 1651,
+            "name": "FunctionDefinition",
+            "src": "2883:106:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "80df45b4",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "creditPlan",
+              "scope": 1746,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@param self contract address\n @return credit the creditPlan of contract 'self'"
+                },
+                "id": 1652,
+                "name": "StructuredDocumentation",
+                "src": "2997:90:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1661,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1653,
+                        "name": "ElementaryTypeName",
+                        "src": "3113:7:13"
+                      }
+                    ],
+                    "id": 1654,
+                    "name": "VariableDeclaration",
+                    "src": "3113:12:13"
+                  }
+                ],
+                "id": 1655,
+                "name": "ParameterList",
+                "src": "3112:14:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "credit",
+                      "scope": 1661,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1656,
+                        "name": "ElementaryTypeName",
+                        "src": "3177:7:13"
+                      }
+                    ],
+                    "id": 1657,
+                    "name": "VariableDeclaration",
+                    "src": "3177:14:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "recoveryRate",
+                      "scope": 1661,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1658,
+                        "name": "ElementaryTypeName",
+                        "src": "3193:7:13"
+                      }
+                    ],
+                    "id": 1659,
+                    "name": "VariableDeclaration",
+                    "src": "3193:20:13"
+                  }
+                ],
+                "id": 1660,
+                "name": "ParameterList",
+                "src": "3176:38:13"
+              }
+            ],
+            "id": 1661,
+            "name": "FunctionDefinition",
+            "src": "3093:122:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "3659f8ed",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "setCreditPlan",
+              "scope": 1746,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@param self contract address\n @param credit original credit\n @param recoveryRate recovery rate of credit"
+                },
+                "id": 1662,
+                "name": "StructuredDocumentation",
+                "src": "3223:124:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1671,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1663,
+                        "name": "ElementaryTypeName",
+                        "src": "3386:7:13"
+                      }
+                    ],
+                    "id": 1664,
+                    "name": "VariableDeclaration",
+                    "src": "3386:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "credit",
+                      "scope": 1671,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1665,
+                        "name": "ElementaryTypeName",
+                        "src": "3409:7:13"
+                      }
+                    ],
+                    "id": 1666,
+                    "name": "VariableDeclaration",
+                    "src": "3409:14:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "recoveryRate",
+                      "scope": 1671,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1667,
+                        "name": "ElementaryTypeName",
+                        "src": "3434:7:13"
+                      }
+                    ],
+                    "id": 1668,
+                    "name": "VariableDeclaration",
+                    "src": "3434:20:13"
+                  }
+                ],
+                "id": 1669,
+                "name": "ParameterList",
+                "src": "3375:86:13"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1670,
+                "name": "ParameterList",
+                "src": "3470:0:13"
+              }
+            ],
+            "id": 1671,
+            "name": "FunctionDefinition",
+            "src": "3353:118:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "02d43dc8",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "isUser",
+              "scope": 1746,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice check if address 'user' is the user of contract 'self'."
+                },
+                "id": 1672,
+                "name": "StructuredDocumentation",
+                "src": "3479:67:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1681,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1673,
+                        "name": "ElementaryTypeName",
+                        "src": "3568:7:13"
+                      }
+                    ],
+                    "id": 1674,
+                    "name": "VariableDeclaration",
+                    "src": "3568:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "user",
+                      "scope": 1681,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1675,
+                        "name": "ElementaryTypeName",
+                        "src": "3582:7:13"
+                      }
+                    ],
+                    "id": 1676,
+                    "name": "VariableDeclaration",
+                    "src": "3582:12:13"
+                  }
+                ],
+                "id": 1677,
+                "name": "ParameterList",
+                "src": "3567:28:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1681,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 1678,
+                        "name": "ElementaryTypeName",
+                        "src": "3619:4:13"
+                      }
+                    ],
+                    "id": 1679,
+                    "name": "VariableDeclaration",
+                    "src": "3619:4:13"
+                  }
+                ],
+                "id": 1680,
+                "name": "ParameterList",
+                "src": "3618:6:13"
+              }
+            ],
+            "id": 1681,
+            "name": "FunctionDefinition",
+            "src": "3552:73:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "c9c4fc41",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "userCredit",
+              "scope": 1746,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice return the current credit of 'user' of the contract 'self'."
+                },
+                "id": 1682,
+                "name": "StructuredDocumentation",
+                "src": "3633:71:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1691,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1683,
+                        "name": "ElementaryTypeName",
+                        "src": "3730:7:13"
+                      }
+                    ],
+                    "id": 1684,
+                    "name": "VariableDeclaration",
+                    "src": "3730:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "user",
+                      "scope": 1691,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1685,
+                        "name": "ElementaryTypeName",
+                        "src": "3744:7:13"
+                      }
+                    ],
+                    "id": 1686,
+                    "name": "VariableDeclaration",
+                    "src": "3744:12:13"
+                  }
+                ],
+                "id": 1687,
+                "name": "ParameterList",
+                "src": "3729:28:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1691,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1688,
+                        "name": "ElementaryTypeName",
+                        "src": "3808:7:13"
+                      }
+                    ],
+                    "id": 1689,
+                    "name": "VariableDeclaration",
+                    "src": "3808:7:13"
+                  }
+                ],
+                "id": 1690,
+                "name": "ParameterList",
+                "src": "3807:9:13"
+              }
+            ],
+            "id": 1691,
+            "name": "FunctionDefinition",
+            "src": "3710:107:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "8ca3b448",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addUser",
+              "scope": 1746,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice add address 'user' to the user list of a contract 'self'."
+                },
+                "id": 1692,
+                "name": "StructuredDocumentation",
+                "src": "3825:69:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1699,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1693,
+                        "name": "ElementaryTypeName",
+                        "src": "3917:7:13"
+                      }
+                    ],
+                    "id": 1694,
+                    "name": "VariableDeclaration",
+                    "src": "3917:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "user",
+                      "scope": 1699,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1695,
+                        "name": "ElementaryTypeName",
+                        "src": "3931:7:13"
+                      }
+                    ],
+                    "id": 1696,
+                    "name": "VariableDeclaration",
+                    "src": "3931:12:13"
+                  }
+                ],
+                "id": 1697,
+                "name": "ParameterList",
+                "src": "3916:28:13"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1698,
+                "name": "ParameterList",
+                "src": "3953:0:13"
+              }
+            ],
+            "id": 1699,
+            "name": "FunctionDefinition",
+            "src": "3900:54:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "22928d6b",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "removeUser",
+              "scope": 1746,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice remove 'user' from the user list of a contract 'self'."
+                },
+                "id": 1700,
+                "name": "StructuredDocumentation",
+                "src": "3962:66:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1707,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1701,
+                        "name": "ElementaryTypeName",
+                        "src": "4054:7:13"
+                      }
+                    ],
+                    "id": 1702,
+                    "name": "VariableDeclaration",
+                    "src": "4054:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "user",
+                      "scope": 1707,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1703,
+                        "name": "ElementaryTypeName",
+                        "src": "4068:7:13"
+                      }
+                    ],
+                    "id": 1704,
+                    "name": "VariableDeclaration",
+                    "src": "4068:12:13"
+                  }
+                ],
+                "id": 1705,
+                "name": "ParameterList",
+                "src": "4053:28:13"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1706,
+                "name": "ParameterList",
+                "src": "4090:0:13"
+              }
+            ],
+            "id": 1707,
+            "name": "FunctionDefinition",
+            "src": "4034:57:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "766c4f37",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "sponsor",
+              "scope": 1746,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice msg sender volunteers to be a sponsor of the contract 'self'."
+                },
+                "id": 1708,
+                "name": "StructuredDocumentation",
+                "src": "4099:73:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1713,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1709,
+                        "name": "ElementaryTypeName",
+                        "src": "4195:7:13"
+                      }
+                    ],
+                    "id": 1710,
+                    "name": "VariableDeclaration",
+                    "src": "4195:12:13"
+                  }
+                ],
+                "id": 1711,
+                "name": "ParameterList",
+                "src": "4194:14:13"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1712,
+                "name": "ParameterList",
+                "src": "4217:0:13"
+              }
+            ],
+            "id": 1713,
+            "name": "FunctionDefinition",
+            "src": "4178:40:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "cdd2a99f",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "unsponsor",
+              "scope": 1746,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice msg sender removes itself from the sponsor candidates list of contract 'self'."
+                },
+                "id": 1714,
+                "name": "StructuredDocumentation",
+                "src": "4226:90:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1719,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1715,
+                        "name": "ElementaryTypeName",
+                        "src": "4341:7:13"
+                      }
+                    ],
+                    "id": 1716,
+                    "name": "VariableDeclaration",
+                    "src": "4341:12:13"
+                  }
+                ],
+                "id": 1717,
+                "name": "ParameterList",
+                "src": "4340:14:13"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1718,
+                "name": "ParameterList",
+                "src": "4363:0:13"
+              }
+            ],
+            "id": 1719,
+            "name": "FunctionDefinition",
+            "src": "4322:42:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "d87333ac",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "isSponsor",
+              "scope": 1746,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice check if 'sponsorAddress' is the sponser of contract 'self'."
+                },
+                "id": 1720,
+                "name": "StructuredDocumentation",
+                "src": "4372:72:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1729,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1721,
+                        "name": "ElementaryTypeName",
+                        "src": "4469:7:13"
+                      }
+                    ],
+                    "id": 1722,
+                    "name": "VariableDeclaration",
+                    "src": "4469:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "sponsorAddress",
+                      "scope": 1729,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1723,
+                        "name": "ElementaryTypeName",
+                        "src": "4483:7:13"
+                      }
+                    ],
+                    "id": 1724,
+                    "name": "VariableDeclaration",
+                    "src": "4483:22:13"
+                  }
+                ],
+                "id": 1725,
+                "name": "ParameterList",
+                "src": "4468:38:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1729,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 1726,
+                        "name": "ElementaryTypeName",
+                        "src": "4557:4:13"
+                      }
+                    ],
+                    "id": 1727,
+                    "name": "VariableDeclaration",
+                    "src": "4557:4:13"
+                  }
+                ],
+                "id": 1728,
+                "name": "ParameterList",
+                "src": "4556:6:13"
+              }
+            ],
+            "id": 1729,
+            "name": "FunctionDefinition",
+            "src": "4450:113:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "3871a9fb",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "selectSponsor",
+              "scope": 1746,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice select 'sponsorAddress' to be current selected sponsor of contract 'self'"
+                },
+                "id": 1730,
+                "name": "StructuredDocumentation",
+                "src": "4571:85:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1737,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1731,
+                        "name": "ElementaryTypeName",
+                        "src": "4685:7:13"
+                      }
+                    ],
+                    "id": 1732,
+                    "name": "VariableDeclaration",
+                    "src": "4685:12:13"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "sponsorAddress",
+                      "scope": 1737,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1733,
+                        "name": "ElementaryTypeName",
+                        "src": "4699:7:13"
+                      }
+                    ],
+                    "id": 1734,
+                    "name": "VariableDeclaration",
+                    "src": "4699:22:13"
+                  }
+                ],
+                "id": 1735,
+                "name": "ParameterList",
+                "src": "4684:38:13"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1736,
+                "name": "ParameterList",
+                "src": "4731:0:13"
+              }
+            ],
+            "id": 1737,
+            "name": "FunctionDefinition",
+            "src": "4662:70:13"
+          },
+          {
+            "attributes": {
+              "functionSelector": "23d8c7db",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "currentSponsor",
+              "scope": 1746,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice return current selected sponsor of contract 'self'"
+                },
+                "id": 1738,
+                "name": "StructuredDocumentation",
+                "src": "4740:62:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "self",
+                      "scope": 1745,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1739,
+                        "name": "ElementaryTypeName",
+                        "src": "4832:7:13"
+                      }
+                    ],
+                    "id": 1740,
+                    "name": "VariableDeclaration",
+                    "src": "4832:12:13"
+                  }
+                ],
+                "id": 1741,
+                "name": "ParameterList",
+                "src": "4831:14:13"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1745,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1742,
+                        "name": "ElementaryTypeName",
+                        "src": "4869:7:13"
+                      }
+                    ],
+                    "id": 1743,
+                    "name": "VariableDeclaration",
+                    "src": "4869:7:13"
+                  }
+                ],
+                "id": 1744,
+                "name": "ParameterList",
+                "src": "4868:9:13"
+              }
+            ],
+            "id": 1745,
+            "name": "FunctionDefinition",
+            "src": "4808:70:13"
+          }
+        ],
+        "id": 1746,
+        "name": "ContractDefinition",
+        "src": "1507:3374:13"
+      }
+    ],
+    "id": 1747,
+    "name": "SourceUnit",
+    "src": "33:4850:13"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-09-17T15:37:01.981Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "balance(address,uint256)": {
+        "params": {
+          "blockNumber": "balance will be calculated at blockNumber",
+          "self": "account address which may be contract account or external account address."
+        },
+        "returns": {
+          "_0": "self the amount of VET at blockNumber"
+        }
+      },
+      "creditPlan(address)": {
+        "params": {
+          "self": "contract address"
+        },
+        "returns": {
+          "credit": "the creditPlan of contract 'self'"
+        }
+      },
+      "energy(address,uint256)": {
+        "params": {
+          "blockNumber": "energy will be calculated at blockNumber",
+          "self": "account address which may be contract account or external account address."
+        },
+        "returns": {
+          "_0": "the amount of energy at blockNumber"
+        }
+      },
+      "hasCode(address)": {
+        "params": {
+          "self": "check if address self is a contract account"
+        }
+      },
+      "master(address)": {
+        "params": {
+          "self": "contract address"
+        },
+        "returns": {
+          "_0": "self master address of self"
+        }
+      },
+      "setCreditPlan(address,uint256,uint256)": {
+        "params": {
+          "credit": "original credit",
+          "recoveryRate": "recovery rate of credit",
+          "self": "contract address"
+        }
+      },
+      "setMaster(address,address)": {
+        "params": {
+          "newMaster": "new master account which will be set.",
+          "self": "contract address"
+        }
+      },
+      "storageFor(address,bytes32)": {
+        "params": {
+          "self": "contract address"
+        },
+        "returns": {
+          "_0": "value indexed by key at self storage"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "addUser(address,address)": {
+        "notice": "add address 'user' to the user list of a contract 'self'."
+      },
+      "currentSponsor(address)": {
+        "notice": "return current selected sponsor of contract 'self'"
+      },
+      "isSponsor(address,address)": {
+        "notice": "check if 'sponsorAddress' is the sponser of contract 'self'."
+      },
+      "isUser(address,address)": {
+        "notice": "check if address 'user' is the user of contract 'self'."
+      },
+      "removeUser(address,address)": {
+        "notice": "remove 'user' from the user list of a contract 'self'."
+      },
+      "selectSponsor(address,address)": {
+        "notice": "select 'sponsorAddress' to be current selected sponsor of contract 'self'"
+      },
+      "setMaster(address,address)": {
+        "notice": "'newMaster' will be set to contract 'self' and this function only works when msg sender is the old master."
+      },
+      "sponsor(address)": {
+        "notice": "msg sender volunteers to be a sponsor of the contract 'self'."
+      },
+      "unsponsor(address)": {
+        "notice": "msg sender removes itself from the sponsor candidates list of contract 'self'."
+      },
+      "userCredit(address,address)": {
+        "notice": "return the current credit of 'user' of the contract 'self'."
+      }
+    },
+    "version": 1
+  }
+}

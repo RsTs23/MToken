@@ -1,0 +1,1373 @@
+{
+  "contractName": "Executor",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_target",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "propose",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_proposalID",
+          "type": "bytes32"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_proposalID",
+          "type": "bytes32"
+        }
+      ],
+      "name": "execute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_approver",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_identity",
+          "type": "bytes32"
+        }
+      ],
+      "name": "addApprover",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_approver",
+          "type": "address"
+        }
+      ],
+      "name": "revokeApprover",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_contract",
+          "type": "address"
+        }
+      ],
+      "name": "attachVotingContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_contract",
+          "type": "address"
+        }
+      ],
+      "name": "detachVotingContract",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_approver\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"_identity\",\"type\":\"bytes32\"}],\"name\":\"addApprover\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_proposalID\",\"type\":\"bytes32\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_contract\",\"type\":\"address\"}],\"name\":\"attachVotingContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_contract\",\"type\":\"address\"}],\"name\":\"detachVotingContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_proposalID\",\"type\":\"bytes32\"}],\"name\":\"execute\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_target\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"propose\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_approver\",\"type\":\"address\"}],\"name\":\"revokeApprover\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addApprover(address,bytes32)\":{\"params\":{\"_approver\":\"account address of the '_approver'\",\"_identity\":\"the id of the '_approver'\"}},\"approve(bytes32)\":{\"params\":{\"_proposalID\":\"identify a voting\"}},\"propose(address,bytes)\":{\"params\":{\"_data\":\"call data, usually composed to method ID plus input data.\",\"_target\":\"a contract address, it will be executed if the voting is passed.\"}}},\"title\":\"Executor represents core component for on-chain governance. The on-chain governance params can be changed by the Executor through a voting. A executive committee are composed to seven approvers who had been added to the contract Executor in the genesis block. The new approver can be added and the old approver also can be removed from the executive committee. The steps of executor include proposing, approving and executing voting if the voting was passed. Only the approver in the executive committee has the authority to propose and approving a voting.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addApprover(address,bytes32)\":{\"notice\":\"add new a new pprover '_approver' to the executive committee\"},\"approve(bytes32)\":{\"notice\":\"approving a voting from a approver\"},\"attachVotingContract(address)\":{\"notice\":\"The contract which is attached can propose a voting\"},\"detachVotingContract(address)\":{\"notice\":\"detach a voting\"},\"execute(bytes32)\":{\"notice\":\"If the voting is passed, the '_proposalID' will be executed. If the two-thirds of approvers in the executive committee approve a voting, the voting will be passed. The voting must be finished one week, or it will be faied no matter pass or not.\"},\"propose(address,bytes)\":{\"notice\":\"proposing a voting from a approver\"},\"revokeApprover(address)\":{\"notice\":\"remove an old approver '_approver' from the executive committee\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/executor.sol\":\"Executor\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/executor.sol\":{\"keccak256\":\"0xa0acb7c303f0eaccc1a6b0f82a955fb4f45a5c2035bdeb45861b85a28542c635\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ad940ae144808c63adab0f2290eac8a6919c994a734d8d0baea6c2e506888ee2\",\"dweb:/ipfs/QmaDCB2pCMHj2x8vNzqmdtBAjSrYTdzGrqrR2ARpd55gmM\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.7.6;\r\n\r\n/// @title Executor represents core component for on-chain governance.\r\n/// The on-chain governance params can be changed by the Executor through a voting.\r\n/// A executive committee are composed to seven approvers who had been added to the contract Executor in the genesis block.\r\n/// The new approver can be added and the old approver also can be removed from the executive committee.\r\n/// The steps of executor include proposing, approving and executing voting if the voting was passed.\r\n/// Only the approver in the executive committee has the authority to propose and approving a voting.\r\n\r\ninterface Executor {\r\n    /// @notice proposing a voting from a approver\r\n    /// @param _target a contract address, it will be executed if the voting is passed.\r\n    /// @param _data call data, usually composed to method ID plus input data.\r\n    function propose(address _target, bytes calldata _data)\r\n        external\r\n        returns (bytes32);\r\n\r\n    /// @notice approving a voting from a approver\r\n    /// @param _proposalID identify a voting\r\n    function approve(bytes32 _proposalID) external;\r\n\r\n    /// @notice If the voting is passed, the '_proposalID' will be executed.\r\n    /// If the two-thirds of approvers in the executive committee approve a voting, the voting will be passed.\r\n    /// The voting must be finished one week, or it will be faied no matter pass or not.\r\n    function execute(bytes32 _proposalID) external;\r\n\r\n    /// @notice add new a new pprover '_approver' to the executive committee\r\n    /// @param _approver account address of the '_approver'\r\n    /// @param _identity the id of the '_approver'\r\n    function addApprover(address _approver, bytes32 _identity) external;\r\n\r\n    /// @notice remove an old approver '_approver' from the executive committee\r\n    function revokeApprover(address _approver) external;\r\n\r\n    /// @notice The contract which is attached can propose a voting\r\n    function attachVotingContract(address _contract) external;\r\n\r\n    /// @notice detach a voting\r\n    function detachVotingContract(address _contract) external;\r\n}\r\n",
+  "sourcePath": "C:\\Users\\paula_dp5y8vd\\token\\contracts\\executor.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/executor.sol",
+    "exportedSymbols": {
+      "Executor": [
+        1498
+      ]
+    },
+    "id": 1499,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1448,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:10"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1449,
+          "nodeType": "StructuredDocumentation",
+          "src": "59:594:10",
+          "text": "@title Executor represents core component for on-chain governance.\n The on-chain governance params can be changed by the Executor through a voting.\n A executive committee are composed to seven approvers who had been added to the contract Executor in the genesis block.\n The new approver can be added and the old approver also can be removed from the executive committee.\n The steps of executor include proposing, approving and executing voting if the voting was passed.\n Only the approver in the executive committee has the authority to propose and approving a voting."
+        },
+        "fullyImplemented": false,
+        "id": 1498,
+        "linearizedBaseContracts": [
+          1498
+        ],
+        "name": "Executor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 1450,
+              "nodeType": "StructuredDocumentation",
+              "src": "681:215:10",
+              "text": "@notice proposing a voting from a approver\n @param _target a contract address, it will be executed if the voting is passed.\n @param _data call data, usually composed to method ID plus input data."
+            },
+            "functionSelector": "9d481848",
+            "id": 1459,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "propose",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1455,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1452,
+                  "mutability": "mutable",
+                  "name": "_target",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1459,
+                  "src": "919:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1451,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "919:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1454,
+                  "mutability": "mutable",
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1459,
+                  "src": "936:20:10",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1453,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "936:5:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "918:39:10"
+            },
+            "returnParameters": {
+              "id": 1458,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1457,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1459,
+                  "src": "994:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1456,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "994:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "993:9:10"
+            },
+            "scope": 1498,
+            "src": "902:101:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1460,
+              "nodeType": "StructuredDocumentation",
+              "src": "1011:92:10",
+              "text": "@notice approving a voting from a approver\n @param _proposalID identify a voting"
+            },
+            "functionSelector": "a53a1adf",
+            "id": 1465,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "approve",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1463,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1462,
+                  "mutability": "mutable",
+                  "name": "_proposalID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1465,
+                  "src": "1126:19:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1461,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1126:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1125:21:10"
+            },
+            "returnParameters": {
+              "id": 1464,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1155:0:10"
+            },
+            "scope": 1498,
+            "src": "1109:47:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1466,
+              "nodeType": "StructuredDocumentation",
+              "src": "1164:274:10",
+              "text": "@notice If the voting is passed, the '_proposalID' will be executed.\n If the two-thirds of approvers in the executive committee approve a voting, the voting will be passed.\n The voting must be finished one week, or it will be faied no matter pass or not."
+            },
+            "functionSelector": "e751f271",
+            "id": 1471,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "execute",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1469,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1468,
+                  "mutability": "mutable",
+                  "name": "_proposalID",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1471,
+                  "src": "1461:19:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1467,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1461:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1460:21:10"
+            },
+            "returnParameters": {
+              "id": 1470,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1490:0:10"
+            },
+            "scope": 1498,
+            "src": "1444:47:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1472,
+              "nodeType": "StructuredDocumentation",
+              "src": "1499:185:10",
+              "text": "@notice add new a new pprover '_approver' to the executive committee\n @param _approver account address of the '_approver'\n @param _identity the id of the '_approver'"
+            },
+            "functionSelector": "3ef0c09e",
+            "id": 1479,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addApprover",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1477,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1474,
+                  "mutability": "mutable",
+                  "name": "_approver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1479,
+                  "src": "1711:17:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1473,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1711:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1476,
+                  "mutability": "mutable",
+                  "name": "_identity",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1479,
+                  "src": "1730:17:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 1475,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1730:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1710:38:10"
+            },
+            "returnParameters": {
+              "id": 1478,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1757:0:10"
+            },
+            "scope": 1498,
+            "src": "1690:68:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1480,
+              "nodeType": "StructuredDocumentation",
+              "src": "1766:75:10",
+              "text": "@notice remove an old approver '_approver' from the executive committee"
+            },
+            "functionSelector": "18d13ef7",
+            "id": 1485,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "revokeApprover",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1483,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1482,
+                  "mutability": "mutable",
+                  "name": "_approver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1485,
+                  "src": "1871:17:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1481,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1871:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1870:19:10"
+            },
+            "returnParameters": {
+              "id": 1484,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1898:0:10"
+            },
+            "scope": 1498,
+            "src": "1847:52:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1486,
+              "nodeType": "StructuredDocumentation",
+              "src": "1907:63:10",
+              "text": "@notice The contract which is attached can propose a voting"
+            },
+            "functionSelector": "a1fb668f",
+            "id": 1491,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "attachVotingContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1489,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1488,
+                  "mutability": "mutable",
+                  "name": "_contract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1491,
+                  "src": "2006:17:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1487,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2006:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2005:19:10"
+            },
+            "returnParameters": {
+              "id": 1490,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2033:0:10"
+            },
+            "scope": 1498,
+            "src": "1976:58:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 1492,
+              "nodeType": "StructuredDocumentation",
+              "src": "2042:27:10",
+              "text": "@notice detach a voting"
+            },
+            "functionSelector": "a83b3bd8",
+            "id": 1497,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "detachVotingContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1495,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1494,
+                  "mutability": "mutable",
+                  "name": "_contract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1497,
+                  "src": "2105:17:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1493,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2105:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2104:19:10"
+            },
+            "returnParameters": {
+              "id": 1496,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2132:0:10"
+            },
+            "scope": 1498,
+            "src": "2075:58:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1499,
+        "src": "655:1481:10"
+      }
+    ],
+    "src": "33:2105:10"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/executor.sol",
+      "exportedSymbols": {
+        "Executor": [
+          1498
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 1448,
+        "name": "PragmaDirective",
+        "src": "33:22:10"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1498
+          ],
+          "name": "Executor",
+          "scope": 1499
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": "@title Executor represents core component for on-chain governance.\n The on-chain governance params can be changed by the Executor through a voting.\n A executive committee are composed to seven approvers who had been added to the contract Executor in the genesis block.\n The new approver can be added and the old approver also can be removed from the executive committee.\n The steps of executor include proposing, approving and executing voting if the voting was passed.\n Only the approver in the executive committee has the authority to propose and approving a voting."
+            },
+            "id": 1449,
+            "name": "StructuredDocumentation",
+            "src": "59:594:10"
+          },
+          {
+            "attributes": {
+              "functionSelector": "9d481848",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "propose",
+              "scope": 1498,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice proposing a voting from a approver\n @param _target a contract address, it will be executed if the voting is passed.\n @param _data call data, usually composed to method ID plus input data."
+                },
+                "id": 1450,
+                "name": "StructuredDocumentation",
+                "src": "681:215:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_target",
+                      "scope": 1459,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1451,
+                        "name": "ElementaryTypeName",
+                        "src": "919:7:10"
+                      }
+                    ],
+                    "id": 1452,
+                    "name": "VariableDeclaration",
+                    "src": "919:15:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_data",
+                      "scope": 1459,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "bytes",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 1453,
+                        "name": "ElementaryTypeName",
+                        "src": "936:5:10"
+                      }
+                    ],
+                    "id": 1454,
+                    "name": "VariableDeclaration",
+                    "src": "936:20:10"
+                  }
+                ],
+                "id": 1455,
+                "name": "ParameterList",
+                "src": "918:39:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 1459,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 1456,
+                        "name": "ElementaryTypeName",
+                        "src": "994:7:10"
+                      }
+                    ],
+                    "id": 1457,
+                    "name": "VariableDeclaration",
+                    "src": "994:7:10"
+                  }
+                ],
+                "id": 1458,
+                "name": "ParameterList",
+                "src": "993:9:10"
+              }
+            ],
+            "id": 1459,
+            "name": "FunctionDefinition",
+            "src": "902:101:10"
+          },
+          {
+            "attributes": {
+              "functionSelector": "a53a1adf",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "approve",
+              "scope": 1498,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice approving a voting from a approver\n @param _proposalID identify a voting"
+                },
+                "id": 1460,
+                "name": "StructuredDocumentation",
+                "src": "1011:92:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_proposalID",
+                      "scope": 1465,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 1461,
+                        "name": "ElementaryTypeName",
+                        "src": "1126:7:10"
+                      }
+                    ],
+                    "id": 1462,
+                    "name": "VariableDeclaration",
+                    "src": "1126:19:10"
+                  }
+                ],
+                "id": 1463,
+                "name": "ParameterList",
+                "src": "1125:21:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1464,
+                "name": "ParameterList",
+                "src": "1155:0:10"
+              }
+            ],
+            "id": 1465,
+            "name": "FunctionDefinition",
+            "src": "1109:47:10"
+          },
+          {
+            "attributes": {
+              "functionSelector": "e751f271",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "execute",
+              "scope": 1498,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice If the voting is passed, the '_proposalID' will be executed.\n If the two-thirds of approvers in the executive committee approve a voting, the voting will be passed.\n The voting must be finished one week, or it will be faied no matter pass or not."
+                },
+                "id": 1466,
+                "name": "StructuredDocumentation",
+                "src": "1164:274:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_proposalID",
+                      "scope": 1471,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 1467,
+                        "name": "ElementaryTypeName",
+                        "src": "1461:7:10"
+                      }
+                    ],
+                    "id": 1468,
+                    "name": "VariableDeclaration",
+                    "src": "1461:19:10"
+                  }
+                ],
+                "id": 1469,
+                "name": "ParameterList",
+                "src": "1460:21:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1470,
+                "name": "ParameterList",
+                "src": "1490:0:10"
+              }
+            ],
+            "id": 1471,
+            "name": "FunctionDefinition",
+            "src": "1444:47:10"
+          },
+          {
+            "attributes": {
+              "functionSelector": "3ef0c09e",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addApprover",
+              "scope": 1498,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice add new a new pprover '_approver' to the executive committee\n @param _approver account address of the '_approver'\n @param _identity the id of the '_approver'"
+                },
+                "id": 1472,
+                "name": "StructuredDocumentation",
+                "src": "1499:185:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_approver",
+                      "scope": 1479,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1473,
+                        "name": "ElementaryTypeName",
+                        "src": "1711:7:10"
+                      }
+                    ],
+                    "id": 1474,
+                    "name": "VariableDeclaration",
+                    "src": "1711:17:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_identity",
+                      "scope": 1479,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 1475,
+                        "name": "ElementaryTypeName",
+                        "src": "1730:7:10"
+                      }
+                    ],
+                    "id": 1476,
+                    "name": "VariableDeclaration",
+                    "src": "1730:17:10"
+                  }
+                ],
+                "id": 1477,
+                "name": "ParameterList",
+                "src": "1710:38:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1478,
+                "name": "ParameterList",
+                "src": "1757:0:10"
+              }
+            ],
+            "id": 1479,
+            "name": "FunctionDefinition",
+            "src": "1690:68:10"
+          },
+          {
+            "attributes": {
+              "functionSelector": "18d13ef7",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "revokeApprover",
+              "scope": 1498,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice remove an old approver '_approver' from the executive committee"
+                },
+                "id": 1480,
+                "name": "StructuredDocumentation",
+                "src": "1766:75:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_approver",
+                      "scope": 1485,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1481,
+                        "name": "ElementaryTypeName",
+                        "src": "1871:7:10"
+                      }
+                    ],
+                    "id": 1482,
+                    "name": "VariableDeclaration",
+                    "src": "1871:17:10"
+                  }
+                ],
+                "id": 1483,
+                "name": "ParameterList",
+                "src": "1870:19:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1484,
+                "name": "ParameterList",
+                "src": "1898:0:10"
+              }
+            ],
+            "id": 1485,
+            "name": "FunctionDefinition",
+            "src": "1847:52:10"
+          },
+          {
+            "attributes": {
+              "functionSelector": "a1fb668f",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "attachVotingContract",
+              "scope": 1498,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice The contract which is attached can propose a voting"
+                },
+                "id": 1486,
+                "name": "StructuredDocumentation",
+                "src": "1907:63:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_contract",
+                      "scope": 1491,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1487,
+                        "name": "ElementaryTypeName",
+                        "src": "2006:7:10"
+                      }
+                    ],
+                    "id": 1488,
+                    "name": "VariableDeclaration",
+                    "src": "2006:17:10"
+                  }
+                ],
+                "id": 1489,
+                "name": "ParameterList",
+                "src": "2005:19:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1490,
+                "name": "ParameterList",
+                "src": "2033:0:10"
+              }
+            ],
+            "id": 1491,
+            "name": "FunctionDefinition",
+            "src": "1976:58:10"
+          },
+          {
+            "attributes": {
+              "functionSelector": "a83b3bd8",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "detachVotingContract",
+              "scope": 1498,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice detach a voting"
+                },
+                "id": 1492,
+                "name": "StructuredDocumentation",
+                "src": "2042:27:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_contract",
+                      "scope": 1497,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1493,
+                        "name": "ElementaryTypeName",
+                        "src": "2105:7:10"
+                      }
+                    ],
+                    "id": 1494,
+                    "name": "VariableDeclaration",
+                    "src": "2105:17:10"
+                  }
+                ],
+                "id": 1495,
+                "name": "ParameterList",
+                "src": "2104:19:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1496,
+                "name": "ParameterList",
+                "src": "2132:0:10"
+              }
+            ],
+            "id": 1497,
+            "name": "FunctionDefinition",
+            "src": "2075:58:10"
+          }
+        ],
+        "id": 1498,
+        "name": "ContractDefinition",
+        "src": "655:1481:10"
+      }
+    ],
+    "id": 1499,
+    "name": "SourceUnit",
+    "src": "33:2105:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-09-17T15:37:01.967Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "addApprover(address,bytes32)": {
+        "params": {
+          "_approver": "account address of the '_approver'",
+          "_identity": "the id of the '_approver'"
+        }
+      },
+      "approve(bytes32)": {
+        "params": {
+          "_proposalID": "identify a voting"
+        }
+      },
+      "propose(address,bytes)": {
+        "params": {
+          "_data": "call data, usually composed to method ID plus input data.",
+          "_target": "a contract address, it will be executed if the voting is passed."
+        }
+      }
+    },
+    "title": "Executor represents core component for on-chain governance. The on-chain governance params can be changed by the Executor through a voting. A executive committee are composed to seven approvers who had been added to the contract Executor in the genesis block. The new approver can be added and the old approver also can be removed from the executive committee. The steps of executor include proposing, approving and executing voting if the voting was passed. Only the approver in the executive committee has the authority to propose and approving a voting.",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "addApprover(address,bytes32)": {
+        "notice": "add new a new pprover '_approver' to the executive committee"
+      },
+      "approve(bytes32)": {
+        "notice": "approving a voting from a approver"
+      },
+      "attachVotingContract(address)": {
+        "notice": "The contract which is attached can propose a voting"
+      },
+      "detachVotingContract(address)": {
+        "notice": "detach a voting"
+      },
+      "execute(bytes32)": {
+        "notice": "If the voting is passed, the '_proposalID' will be executed. If the two-thirds of approvers in the executive committee approve a voting, the voting will be passed. The voting must be finished one week, or it will be faied no matter pass or not."
+      },
+      "propose(address,bytes)": {
+        "notice": "proposing a voting from a approver"
+      },
+      "revokeApprover(address)": {
+        "notice": "remove an old approver '_approver' from the executive committee"
+      }
+    },
+    "version": 1
+  }
+}

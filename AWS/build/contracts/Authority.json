@@ -1,0 +1,1444 @@
+{
+  "contractName": "Authority",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "executor",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_signer",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_endorsor",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_identity",
+          "type": "bytes32"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_signer",
+          "type": "address"
+        }
+      ],
+      "name": "revoke",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_signer",
+          "type": "address"
+        }
+      ],
+      "name": "get",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "listed",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "endorsor",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "identity",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bool",
+          "name": "active",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "first",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_signer",
+          "type": "address"
+        }
+      ],
+      "name": "next",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_signer\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_endorsor\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"_identity\",\"type\":\"bytes32\"}],\"name\":\"add\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"executor\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"first\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_signer\",\"type\":\"address\"}],\"name\":\"get\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"listed\",\"type\":\"bool\"},{\"internalType\":\"address\",\"name\":\"endorsor\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"identity\",\"type\":\"bytes32\"},{\"internalType\":\"bool\",\"name\":\"active\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_signer\",\"type\":\"address\"}],\"name\":\"next\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_signer\",\"type\":\"address\"}],\"name\":\"revoke\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"executor()\":{\"returns\":{\"_0\":\"executor address\"}}},\"title\":\"Authority is related to the POA(proof of authority) consensus mechanism. The Authority contract manages a list of candidates propsers who is responsible for packing transactions into a block. The propsers are authorized by a voting committee, but only the first 101 propsers in the candidates list can pack block. A candidates propser include signer address, endorsor address and identity. Signer address is releated to sign a block, endorsor address is used for charging miner's fee and identity is used for identifying the proposer.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"add(address,address,bytes32)\":{\"notice\":\"add a proposer to the candidates lists.\"},\"first()\":{\"notice\":\"get the first proposer in the candidates list.\"},\"get(address)\":{\"notice\":\"get infomation about proposer \\\"_signer\\\"\"},\"next(address)\":{\"notice\":\"get next one of proposer \\\"_signer\\\"\"},\"revoke(address)\":{\"notice\":\"remove proposer '_signer' from the candidates lists.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/authority.sol\":\"Authority\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/authority.sol\":{\"keccak256\":\"0xaf56862805f6fe544657a84753609e79121d3658e07c2d304c846c622e4e2150\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c2e3bac3332f7709865b137b389dae83ec0c38d8276c7ab7e51d006ed7dcbbb7\",\"dweb:/ipfs/Qmbcth9CE3g9p3hEVV5FtDy4NFi1PA5tQhewGZptgvg8ir\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.7.6;\r\n\r\n/// @title Authority is related to the POA(proof of authority) consensus mechanism.\r\n/// The Authority contract manages a list of candidates propsers who is responsible for packing transactions into a block.\r\n/// The propsers are authorized by a voting committee, but only the first 101 propsers in the candidates list can pack block.\r\n/// A candidates propser include signer address, endorsor address and identity.\r\n/// Signer address is releated to sign a block, endorsor address is used for charging miner's fee and identity is used for identifying the proposer.\r\n\r\ninterface Authority {\r\n    /// @return executor address\r\n    function executor() external view returns (address);\r\n\r\n    /// @notice add a proposer to the candidates lists.\r\n    function add(\r\n        address _signer,\r\n        address _endorsor,\r\n        bytes32 _identity\r\n    ) external;\r\n\r\n    /// @notice remove proposer '_signer' from the candidates lists.\r\n    function revoke(address _signer) external;\r\n\r\n    /// @notice get infomation about proposer \"_signer\"\r\n    function get(address _signer)\r\n        external\r\n        view\r\n        returns (\r\n            bool listed,\r\n            address endorsor,\r\n            bytes32 identity,\r\n            bool active\r\n        );\r\n\r\n    /// @notice get the first proposer in the candidates list.\r\n    function first() external view returns (address);\r\n\r\n    /// @notice get next one of proposer \"_signer\"\r\n    function next(address _signer) external view returns (address);\r\n}\r\n",
+  "sourcePath": "C:\\Users\\paula_dp5y8vd\\token\\contracts\\authority.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/authority.sol",
+    "exportedSymbols": {
+      "Authority": [
+        943
+      ]
+    },
+    "id": 944,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 891,
+        "literals": [
+          "solidity",
+          "0.7",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:7"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 892,
+          "nodeType": "StructuredDocumentation",
+          "src": "59:567:7",
+          "text": "@title Authority is related to the POA(proof of authority) consensus mechanism.\n The Authority contract manages a list of candidates propsers who is responsible for packing transactions into a block.\n The propsers are authorized by a voting committee, but only the first 101 propsers in the candidates list can pack block.\n A candidates propser include signer address, endorsor address and identity.\n Signer address is releated to sign a block, endorsor address is used for charging miner's fee and identity is used for identifying the proposer."
+        },
+        "fullyImplemented": false,
+        "id": 943,
+        "linearizedBaseContracts": [
+          943
+        ],
+        "name": "Authority",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 893,
+              "nodeType": "StructuredDocumentation",
+              "src": "655:28:7",
+              "text": "@return executor address"
+            },
+            "functionSelector": "c34c08e5",
+            "id": 898,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "executor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 894,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "706:2:7"
+            },
+            "returnParameters": {
+              "id": 897,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 896,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 898,
+                  "src": "732:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 895,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "732:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "731:9:7"
+            },
+            "scope": 943,
+            "src": "689:52:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 899,
+              "nodeType": "StructuredDocumentation",
+              "src": "749:51:7",
+              "text": "@notice add a proposer to the candidates lists."
+            },
+            "functionSelector": "dc0094b8",
+            "id": 908,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 906,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 901,
+                  "mutability": "mutable",
+                  "name": "_signer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 908,
+                  "src": "829:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 900,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "829:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 903,
+                  "mutability": "mutable",
+                  "name": "_endorsor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 908,
+                  "src": "855:17:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 902,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "855:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 905,
+                  "mutability": "mutable",
+                  "name": "_identity",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 908,
+                  "src": "883:17:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 904,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "883:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "818:89:7"
+            },
+            "returnParameters": {
+              "id": 907,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "916:0:7"
+            },
+            "scope": 943,
+            "src": "806:111:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 909,
+              "nodeType": "StructuredDocumentation",
+              "src": "925:64:7",
+              "text": "@notice remove proposer '_signer' from the candidates lists."
+            },
+            "functionSelector": "74a8f103",
+            "id": 914,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "revoke",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 912,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 911,
+                  "mutability": "mutable",
+                  "name": "_signer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 914,
+                  "src": "1011:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 910,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1011:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1010:17:7"
+            },
+            "returnParameters": {
+              "id": 913,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1036:0:7"
+            },
+            "scope": 943,
+            "src": "995:42:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 915,
+              "nodeType": "StructuredDocumentation",
+              "src": "1045:51:7",
+              "text": "@notice get infomation about proposer \"_signer\""
+            },
+            "functionSelector": "c2bc2efc",
+            "id": 928,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "get",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 917,
+                  "mutability": "mutable",
+                  "name": "_signer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 928,
+                  "src": "1115:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 916,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1115:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1114:17:7"
+            },
+            "returnParameters": {
+              "id": 927,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 920,
+                  "mutability": "mutable",
+                  "name": "listed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 928,
+                  "src": "1196:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 919,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1196:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 922,
+                  "mutability": "mutable",
+                  "name": "endorsor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 928,
+                  "src": "1222:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 921,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1222:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 924,
+                  "mutability": "mutable",
+                  "name": "identity",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 928,
+                  "src": "1253:16:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 923,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1253:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 926,
+                  "mutability": "mutable",
+                  "name": "active",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 928,
+                  "src": "1284:11:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 925,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1284:4:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1181:125:7"
+            },
+            "scope": 943,
+            "src": "1102:205:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 929,
+              "nodeType": "StructuredDocumentation",
+              "src": "1315:58:7",
+              "text": "@notice get the first proposer in the candidates list."
+            },
+            "functionSelector": "3df4ddf4",
+            "id": 934,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "first",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 930,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1393:2:7"
+            },
+            "returnParameters": {
+              "id": 933,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 932,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 934,
+                  "src": "1419:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 931,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1419:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1418:9:7"
+            },
+            "scope": 943,
+            "src": "1379:49:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 935,
+              "nodeType": "StructuredDocumentation",
+              "src": "1436:46:7",
+              "text": "@notice get next one of proposer \"_signer\""
+            },
+            "functionSelector": "ab73e316",
+            "id": 942,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "next",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 938,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 937,
+                  "mutability": "mutable",
+                  "name": "_signer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 942,
+                  "src": "1502:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 936,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1502:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1501:17:7"
+            },
+            "returnParameters": {
+              "id": 941,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 940,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 942,
+                  "src": "1542:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 939,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1542:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1541:9:7"
+            },
+            "scope": 943,
+            "src": "1488:63:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 944,
+        "src": "628:926:7"
+      }
+    ],
+    "src": "33:1523:7"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/authority.sol",
+      "exportedSymbols": {
+        "Authority": [
+          943
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.7",
+            ".6"
+          ]
+        },
+        "id": 891,
+        "name": "PragmaDirective",
+        "src": "33:22:7"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            943
+          ],
+          "name": "Authority",
+          "scope": 944
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": "@title Authority is related to the POA(proof of authority) consensus mechanism.\n The Authority contract manages a list of candidates propsers who is responsible for packing transactions into a block.\n The propsers are authorized by a voting committee, but only the first 101 propsers in the candidates list can pack block.\n A candidates propser include signer address, endorsor address and identity.\n Signer address is releated to sign a block, endorsor address is used for charging miner's fee and identity is used for identifying the proposer."
+            },
+            "id": 892,
+            "name": "StructuredDocumentation",
+            "src": "59:567:7"
+          },
+          {
+            "attributes": {
+              "functionSelector": "c34c08e5",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "executor",
+              "scope": 943,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@return executor address"
+                },
+                "id": 893,
+                "name": "StructuredDocumentation",
+                "src": "655:28:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 894,
+                "name": "ParameterList",
+                "src": "706:2:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 898,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 895,
+                        "name": "ElementaryTypeName",
+                        "src": "732:7:7"
+                      }
+                    ],
+                    "id": 896,
+                    "name": "VariableDeclaration",
+                    "src": "732:7:7"
+                  }
+                ],
+                "id": 897,
+                "name": "ParameterList",
+                "src": "731:9:7"
+              }
+            ],
+            "id": 898,
+            "name": "FunctionDefinition",
+            "src": "689:52:7"
+          },
+          {
+            "attributes": {
+              "functionSelector": "dc0094b8",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "add",
+              "scope": 943,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice add a proposer to the candidates lists."
+                },
+                "id": 899,
+                "name": "StructuredDocumentation",
+                "src": "749:51:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_signer",
+                      "scope": 908,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 900,
+                        "name": "ElementaryTypeName",
+                        "src": "829:7:7"
+                      }
+                    ],
+                    "id": 901,
+                    "name": "VariableDeclaration",
+                    "src": "829:15:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_endorsor",
+                      "scope": 908,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 902,
+                        "name": "ElementaryTypeName",
+                        "src": "855:7:7"
+                      }
+                    ],
+                    "id": 903,
+                    "name": "VariableDeclaration",
+                    "src": "855:17:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_identity",
+                      "scope": 908,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 904,
+                        "name": "ElementaryTypeName",
+                        "src": "883:7:7"
+                      }
+                    ],
+                    "id": 905,
+                    "name": "VariableDeclaration",
+                    "src": "883:17:7"
+                  }
+                ],
+                "id": 906,
+                "name": "ParameterList",
+                "src": "818:89:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 907,
+                "name": "ParameterList",
+                "src": "916:0:7"
+              }
+            ],
+            "id": 908,
+            "name": "FunctionDefinition",
+            "src": "806:111:7"
+          },
+          {
+            "attributes": {
+              "functionSelector": "74a8f103",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "revoke",
+              "scope": 943,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice remove proposer '_signer' from the candidates lists."
+                },
+                "id": 909,
+                "name": "StructuredDocumentation",
+                "src": "925:64:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_signer",
+                      "scope": 914,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 910,
+                        "name": "ElementaryTypeName",
+                        "src": "1011:7:7"
+                      }
+                    ],
+                    "id": 911,
+                    "name": "VariableDeclaration",
+                    "src": "1011:15:7"
+                  }
+                ],
+                "id": 912,
+                "name": "ParameterList",
+                "src": "1010:17:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 913,
+                "name": "ParameterList",
+                "src": "1036:0:7"
+              }
+            ],
+            "id": 914,
+            "name": "FunctionDefinition",
+            "src": "995:42:7"
+          },
+          {
+            "attributes": {
+              "functionSelector": "c2bc2efc",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "get",
+              "scope": 943,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice get infomation about proposer \"_signer\""
+                },
+                "id": 915,
+                "name": "StructuredDocumentation",
+                "src": "1045:51:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_signer",
+                      "scope": 928,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 916,
+                        "name": "ElementaryTypeName",
+                        "src": "1115:7:7"
+                      }
+                    ],
+                    "id": 917,
+                    "name": "VariableDeclaration",
+                    "src": "1115:15:7"
+                  }
+                ],
+                "id": 918,
+                "name": "ParameterList",
+                "src": "1114:17:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "listed",
+                      "scope": 928,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 919,
+                        "name": "ElementaryTypeName",
+                        "src": "1196:4:7"
+                      }
+                    ],
+                    "id": 920,
+                    "name": "VariableDeclaration",
+                    "src": "1196:11:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "endorsor",
+                      "scope": 928,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 921,
+                        "name": "ElementaryTypeName",
+                        "src": "1222:7:7"
+                      }
+                    ],
+                    "id": 922,
+                    "name": "VariableDeclaration",
+                    "src": "1222:16:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "identity",
+                      "scope": 928,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 923,
+                        "name": "ElementaryTypeName",
+                        "src": "1253:7:7"
+                      }
+                    ],
+                    "id": 924,
+                    "name": "VariableDeclaration",
+                    "src": "1253:16:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "active",
+                      "scope": 928,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 925,
+                        "name": "ElementaryTypeName",
+                        "src": "1284:4:7"
+                      }
+                    ],
+                    "id": 926,
+                    "name": "VariableDeclaration",
+                    "src": "1284:11:7"
+                  }
+                ],
+                "id": 927,
+                "name": "ParameterList",
+                "src": "1181:125:7"
+              }
+            ],
+            "id": 928,
+            "name": "FunctionDefinition",
+            "src": "1102:205:7"
+          },
+          {
+            "attributes": {
+              "functionSelector": "3df4ddf4",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "first",
+              "scope": 943,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice get the first proposer in the candidates list."
+                },
+                "id": 929,
+                "name": "StructuredDocumentation",
+                "src": "1315:58:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 930,
+                "name": "ParameterList",
+                "src": "1393:2:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 934,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 931,
+                        "name": "ElementaryTypeName",
+                        "src": "1419:7:7"
+                      }
+                    ],
+                    "id": 932,
+                    "name": "VariableDeclaration",
+                    "src": "1419:7:7"
+                  }
+                ],
+                "id": 933,
+                "name": "ParameterList",
+                "src": "1418:9:7"
+              }
+            ],
+            "id": 934,
+            "name": "FunctionDefinition",
+            "src": "1379:49:7"
+          },
+          {
+            "attributes": {
+              "functionSelector": "ab73e316",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "next",
+              "scope": 943,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "@notice get next one of proposer \"_signer\""
+                },
+                "id": 935,
+                "name": "StructuredDocumentation",
+                "src": "1436:46:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_signer",
+                      "scope": 942,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 936,
+                        "name": "ElementaryTypeName",
+                        "src": "1502:7:7"
+                      }
+                    ],
+                    "id": 937,
+                    "name": "VariableDeclaration",
+                    "src": "1502:15:7"
+                  }
+                ],
+                "id": 938,
+                "name": "ParameterList",
+                "src": "1501:17:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "scope": 942,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 939,
+                        "name": "ElementaryTypeName",
+                        "src": "1542:7:7"
+                      }
+                    ],
+                    "id": 940,
+                    "name": "VariableDeclaration",
+                    "src": "1542:7:7"
+                  }
+                ],
+                "id": 941,
+                "name": "ParameterList",
+                "src": "1541:9:7"
+              }
+            ],
+            "id": 942,
+            "name": "FunctionDefinition",
+            "src": "1488:63:7"
+          }
+        ],
+        "id": 943,
+        "name": "ContractDefinition",
+        "src": "628:926:7"
+      }
+    ],
+    "id": 944,
+    "name": "SourceUnit",
+    "src": "33:1523:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-09-17T15:37:01.946Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "executor()": {
+        "returns": {
+          "_0": "executor address"
+        }
+      }
+    },
+    "title": "Authority is related to the POA(proof of authority) consensus mechanism. The Authority contract manages a list of candidates propsers who is responsible for packing transactions into a block. The propsers are authorized by a voting committee, but only the first 101 propsers in the candidates list can pack block. A candidates propser include signer address, endorsor address and identity. Signer address is releated to sign a block, endorsor address is used for charging miner's fee and identity is used for identifying the proposer.",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "add(address,address,bytes32)": {
+        "notice": "add a proposer to the candidates lists."
+      },
+      "first()": {
+        "notice": "get the first proposer in the candidates list."
+      },
+      "get(address)": {
+        "notice": "get infomation about proposer \"_signer\""
+      },
+      "next(address)": {
+        "notice": "get next one of proposer \"_signer\""
+      },
+      "revoke(address)": {
+        "notice": "remove proposer '_signer' from the candidates lists."
+      }
+    },
+    "version": 1
+  }
+}
